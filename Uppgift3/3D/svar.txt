@@ -1,0 +1,3 @@
+Lämpligast är att placera programmet i /usr/local/bin
+/usr eftersom katalogen delas mellan användare
+/local/bin eftersom /bin agerar samlingsplats för körbara progra

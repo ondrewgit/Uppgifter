@@ -15,20 +15,19 @@ c_functions.o: c_functions.c c.h
 d_functions.o: d_functions.c d.h
 	gcc -c d_functions.c
 	
+			
 program1: main.o a_functions.o b_functions.o c_functions.o d_functions.o
 	gcc main.o a_functions.o b_functions.o c_functions.o d_functions.o -o program1
-	
-install:
-	install program1 -t /usr/local/bin
 
 #Lämpligast är att placera programmet i /usr/local/bin
 #/usr eftersom katalogen delas mellan användare
 #/local/bin eftersom /bin agerar samlingsplats för körbara program
+
+install:
+	install program1 /usr/local/bin
 
 uninstall:
 	rm -f /usr/local/bin/program1
 
 clean:
 	rm -f *.o program1
-
-program 1: install clean
